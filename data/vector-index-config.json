@@ -1,0 +1,30 @@
+{
+    "settings": {
+        "index": {
+            "knn": true,
+            "knn.algo_param.ef_search": 512
+        }
+    },
+    "mappings": {
+        "properties": {
+            "AMAZON_BEDROCK_VECTOR": {
+                "type": "knn_vector",
+                "dimension": 1536,
+                "method": {
+                    "name": "hnsw",
+                    "engine": "nmslib",
+                    "parameters": {},
+                    "space_type": "cosinesimil"
+                }
+            },
+            "AMAZON_BEDROCK_METADATA": {
+                "type": "text",
+                "index": "false"
+            },
+            "AMAZON_BEDROCK_TEXT_CHUNK": {
+                "type": "text",
+                "index": "true"
+            }
+        }
+    }
+}

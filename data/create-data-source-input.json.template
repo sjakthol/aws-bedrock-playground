@@ -1,0 +1,11 @@
+{
+    "knowledgeBaseId": "BEDROCK_KB_ID",
+    "name": "BEDROCK_DS_NAME",
+    "description": "Data source for Bedrock Knowledge Base",
+    "dataSourceConfiguration": {
+        "type": "S3",
+        "s3Configuration": {
+            "bucketArn": "BEDROCK_KB_INPUT_BUCKET_ARN"
+        }
+    }
+}

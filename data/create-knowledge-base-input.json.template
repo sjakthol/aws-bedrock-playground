@@ -1,0 +1,26 @@
+{
+    "name": "BEDROCK_KB_NAME",
+    "description": "test",
+    "roleArn": "BEDROCK_ROLE_ARN",
+    "knowledgeBaseConfiguration": {
+        "type": "VECTOR",
+        "vectorKnowledgeBaseConfiguration": {
+            "embeddingModelArn": "arn:aws:bedrock:us-west-2::foundation-model/amazon.titan-embed-text-v1"
+        }
+    },
+    "storageConfiguration": {
+        "type": "OPENSEARCH_SERVERLESS",
+        "opensearchServerlessConfiguration": {
+            "collectionArn": "AOSS_COLLECTION_ARN",
+            "vectorIndexName": "VECTOR_INDEX_NAME",
+            "fieldMapping": {
+                "vectorField": "AMAZON_BEDROCK_VECTOR",
+                "textField": "AMAZON_BEDROCK_TEXT_CHUNK",
+                "metadataField": "AMAZON_BEDROCK_METADATA"
+            }
+        }
+    },
+    "tags": {
+        "Name": "BEDROCK_KB_NAME"
+    }
+}
