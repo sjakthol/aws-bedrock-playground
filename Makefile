@@ -10,7 +10,7 @@ DEPLOYER_ARN = $(eval DEPLOYER_ARN := $(shell $(AWS_CMD) sts get-caller-identity
 
 AWS_CMD := $(AWS) --region $(AWS_REGION)
 
-STACK_NAME_PREFIX := $(AWS_$(AWS_REGION)_PREFIX)-bedrock2
+STACK_NAME_PREFIX := $(AWS_$(AWS_REGION)_PREFIX)-bedrock
 
 TAGS ?= Project=$(STACK_NAME_PREFIX)
 
